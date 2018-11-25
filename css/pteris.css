@@ -92,7 +92,7 @@ footer .filing {
 .pagination {
   margin-bottom: 2rem; }
   .pagination .page-number.current {
-    color: #ff0;
+    color: #fff;
     background: #93b658;
     border-top-color: #ccc; }
   .pagination .prev, .pagination .next, .pagination .page-number {
