@@ -1,21 +1,189 @@
-extends base
+<!doctype html>
+<html lang="">
 
-block nav
-    - var pageName = "ARCHIVES"
-    include _partial/menu
 
-block header
-    - var tag = __("site_tags");
-    - var pageHeader = tag + " : " + page.tag
-    include _partial/body_header
 
-block content
-    div.body__content.archive__content
-        each post in page.posts.toArray()
-            a(href=url_for(post.path), title=post.title).body__item.post__title
-                span!= post.title
-                - var d = new Date(post.date)
-                - var dstr = d.getFullYear() + "/" + (d.getMonth()+1) + "/" + d.getDate()
-                span(class="archive_date")!= dstr
-    div.body__pagination
-        div.pull-right!= paginator()
+    
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#93b658">
+    <title>Archives: 11/2018: 2018 | Hexo </title>
+
+    
+        <meta name="keywords" content="keyword1, keyword2">
+        
+
+    
+    <meta name="description" content="">
+
+    
+
+    
+
+    
+
+    
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="/lib/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/css/post/atom-one-light.css">
+    <link rel="stylesheet" href="/css/pteris.css">
+
+
+    
+
+    
+
+    
+        <link rel="stylesheet" href="/css/your.css.file.css">
+    
+</head>
+
+<body>
+
+<header>
+    
+        <div class="header-fixed">
+    <nav class="white lime-text lighten-1 " role="navigation">
+        <div class="nav-wrapper container">
+            <div id="logo-container">
+                <a href="/">
+                    
+                    <span class="brand-logo">Dog-river</span>
+                </a>
+            </div>
+
+            <ul class="right hide-on-med-and-down">
+                
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse">
+                <i class="fa fa-bars green-text"></i></a>
+        </div>
+    </nav>
+</div>
+
+<ul id="nav-mobile" class="side-nav">
+    
+</ul>
+
+
+
+    
+</header>
+
+<main>
+    
+
+
+    
+    
+    
+
+    <div id="archive">
+        <div class="container">
+            
+                <div id="archive-year" class="center">
+                    <h5>11/2018</h5>
+
+                    <div class="posts">
+                    
+                        <div class="archive-item">
+                            
+
+                            
+                                <!-- internal link -->
+                                <a href="/2018/11/25/hello-world/">
+                                    Hello World
+                                </a>
+                            
+
+                            <time datetime="2018-11-25T14:15:09.875Z">
+                                2018-11-25
+                            </time>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    
+
+
+
+
+</main>
+
+<footer>
+    
+        <footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            <div>© 2017 Copyright John Doe
+                <span class="right">
+                powered by
+                <a href="http://hexo.io">hexo</a>.
+                theme:
+                <a href="https://github.com/jonashao/hexo-theme-pteris">pteris</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    
+</footer>
+
+    
+</footer>
+
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/materialize/dist/js/materialize.min.js"></script>
+<script src="/lib/headroom.js/dist/headroom.min.js"></script>
+<script src="/lib/headroom.js/dist/jQuery.headroom.min.js"></script>
+
+
+
+
+
+    
+    <script src="/js/your.js.file.js"></script>
+
+<script src="/js/pteris.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
