@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="I.       写在前面 Nmap是什么？ ​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。  功能？ ​    探测一组主机是否在线； ​    扫描主机端口，嗅探所提供的网络服务； ​    推断主机所用的操作系统 。  所用工具： ​    Nmap（命令行），wireshark，虚拟机（调试到仅主机模式）  如何获取Nmap？ ​    最初Nmap是工作在">
+<meta name="description" content="I.       写在前面 Nmap是什么？ ​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。">
 <meta name="keywords" content="Nmap">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nmap从入门到实践">
 <meta property="og:url" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/index.html">
 <meta property="og:site_name" content="On The Road">
-<meta property="og:description" content="I.       写在前面 Nmap是什么？ ​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。  功能？ ​    探测一组主机是否在线； ​    扫描主机端口，嗅探所提供的网络服务； ​    推断主机所用的操作系统 。  所用工具： ​    Nmap（命令行），wireshark，虚拟机（调试到仅主机模式）  如何获取Nmap？ ​    最初Nmap是工作在">
+<meta property="og:description" content="I.       写在前面 Nmap是什么？ ​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/E:/Dogriver/source/_posts/Nmap从入门到实践/1.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/E:/Dogriver/source/_posts/Nmap从入门到实践/2.png">
@@ -108,10 +108,10 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/E:/Dogriver/source/_posts/Nmap从入门到实践/17.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/E:/Dogriver/source/_posts/Nmap从入门到实践/18.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/E:/Dogriver/source/_posts/Nmap从入门到实践/19.png">
-<meta property="og:updated_time" content="2018-11-28T13:04:14.831Z">
+<meta property="og:updated_time" content="2018-11-28T13:17:45.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nmap从入门到实践">
-<meta name="twitter:description" content="I.       写在前面 Nmap是什么？ ​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。  功能？ ​    探测一组主机是否在线； ​    扫描主机端口，嗅探所提供的网络服务； ​    推断主机所用的操作系统 。  所用工具： ​    Nmap（命令行），wireshark，虚拟机（调试到仅主机模式）  如何获取Nmap？ ​    最初Nmap是工作在">
+<meta name="twitter:description" content="I.       写在前面 Nmap是什么？ ​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。">
 <meta name="twitter:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/E:/Dogriver/source/_posts/Nmap从入门到实践/1.png">
 
 
@@ -382,6 +382,7 @@
         <h1 id="I-写在前面"><a href="#I-写在前面" class="headerlink" title="I.       写在前面"></a>I.       写在前面</h1><ul>
 <li><p>Nmap是什么？</p>
 <p>​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。</p>
+<a id="more"></a>
 </li>
 <li><p>功能？</p>
 <p>​    探测一组主机是否在线；</p>
@@ -398,7 +399,7 @@
 </li>
 <li><p>一定要在官网中下载，从别的渠道得到的里面可能会有别人加的后门。</p>
 <p>​     <img src="/2018/11/28/Nmap从入门到实践/E:/Dogriver\source\_posts\Nmap从入门到实践\1.png" alt="">                                      </p>
-<p><img src="/2018/11/28/Nmap从入门到实践/E:/Dogriver\source\_posts\Nmap从入门到实践\2.png" alt=""></p>
+<p> <img src="/2018/11/28/Nmap从入门到实践/E:/Dogriver\source\_posts\Nmap从入门到实践\2.png" alt=""></p>
 </li>
 </ul>
 <p>   <img src="/2018/11/28/Nmap从入门到实践/E:/Dogriver\source\_posts\Nmap从入门到实践\3.png" alt=""></p>
@@ -427,22 +428,30 @@
 <thead>
 <tr>
 <th>open</th>
-<th>closed</th>
-<th>filtered</th>
-<th>unfiltered</th>
-<th>open\</th>
-<th>filtered</th>
-<th>closed\</th>
-<th>filtered</th>
+<th>开放的</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>开放的</td>
+<td>close</td>
 <td>关闭的</td>
+</tr>
+<tr>
+<td>filtered</td>
 <td>被防火墙过滤的</td>
+</tr>
+<tr>
+<td>unfiltered</td>
 <td>未被过滤的</td>
+</tr>
+<tr>
+<td>open\</td>
+<td>filtered</td>
 <td>开放或者被过滤的</td>
+</tr>
+<tr>
+<td>closed\</td>
+<td>filtered</td>
 <td>关闭或者被过滤的</td>
 </tr>
 </tbody>
