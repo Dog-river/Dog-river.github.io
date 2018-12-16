@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-28T15:22:17.359Z</updated>
+  <updated>2018-12-16T14:40:31.842Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux系统基本命令小结</title>
+    <link href="http://yoursite.com/2018/12/11/Linux%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/12/11/Linux系统基本命令小结/</id>
+    <published>2018-12-11T13:29:29.000Z</published>
+    <updated>2018-12-16T14:40:31.842Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Linux系统中的常用命令&quot;&gt;&lt;a href=&quot;#Linux系统中的常用命令&quot; class=&quot;headerlink&quot; title=&quot;Linux系统中的常用命令&quot;&gt;&lt;/a&gt;&lt;strong&gt;Linux系统中的常用命令&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、获得命令帮助信息：&quot;&gt;&lt;a href=&quot;#一、获得命令帮助信息：&quot; class=&quot;headerlink&quot; title=&quot;一、获得命令帮助信息：&quot;&gt;&lt;/a&gt;一、获得命令帮助信息：&lt;/h2&gt;&lt;p&gt; 获得命令的使用语法&lt;/p&gt;
+&lt;p&gt; 获得命令的选项及功能解释&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Nmap从入门到实践</title>
@@ -33,33 +52,6 @@
     
     
       <category term="Nmap" scheme="http://yoursite.com/tags/Nmap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://yoursite.com/2018/11/27/test/"/>
-    <id>http://yoursite.com/2018/11/27/test/</id>
-    <published>2018-11-27T15:54:01.000Z</published>
-    <updated>2018-11-27T16:01:59.997Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;刚搭建好，测试一哈。&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-    
-      <category term="md" scheme="http://yoursite.com/tags/md/"/>
-    
-      <category term="lll" scheme="http://yoursite.com/tags/lll/"/>
     
   </entry>
   
