@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-17T01:13:10.114Z</updated>
+  <updated>2019-03-23T07:23:41.447Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/03/23/%E5%AF%B9%E4%BA%8E%E4%B8%80%E4%B8%AA%E9%9D%B6%E6%9C%BA%E7%9A%84%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%EF%BC%88zico2%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/03/23/对于一个靶机的渗透测试（zico2）/</id>
+    <published>2019-03-23T07:23:41.059Z</published>
+    <updated>2019-03-23T07:23:41.447Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;对于一个靶机的渗透测试（zico2）&quot;&gt;&lt;a href=&quot;#对于一个靶机的渗透测试（zico2）&quot; class=&quot;headerlink&quot; title=&quot;对于一个靶机的渗透测试（zico2）&quot;&gt;&lt;/a&gt;对于一个靶机的渗透测试（zico2）&lt;/h1&gt;&lt;hr&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>渗透测试（zico2）</title>
+    <link href="http://yoursite.com/2019/03/23/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%EF%BC%88zico2%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/03/23/渗透测试（zico2）/</id>
+    <published>2019-03-23T07:12:44.000Z</published>
+    <updated>2019-03-23T07:28:08.275Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;渗透测试（zico2）&quot;&gt;&lt;a href=&quot;#渗透测试（zico2）&quot; class=&quot;headerlink&quot; title=&quot;渗透测试（zico2）&quot;&gt;&lt;/a&gt;渗透测试（zico2）&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;目标：&quot;&gt;&lt;a href=&quot;#目标：&quot; class=&quot;headerlink&quot; title=&quot;目标：&quot;&gt;&lt;/a&gt;目标：&lt;/h2&gt;&lt;p&gt;​    对靶机进行测试，通过端口服务，漏洞或其他方式获取shell，并提升权限。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hack-text" scheme="http://yoursite.com/tags/hack-text/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux系统基本命令小结</title>
