@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-24T04:20:17.699Z</updated>
+  <updated>2019-03-25T10:21:20.002Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>渗透测试（FristiLeaks）</title>
+    <link href="http://yoursite.com/2019/03/25/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%EF%BC%88FristiLeaks%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/03/25/渗透测试（FristiLeaks）/</id>
+    <published>2019-03-25T07:20:25.000Z</published>
+    <updated>2019-03-25T10:21:20.002Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;目的：&quot;&gt;&lt;a href=&quot;#目的：&quot; class=&quot;headerlink&quot; title=&quot;目的：&quot;&gt;&lt;/a&gt;目的：&lt;/h2&gt;&lt;p&gt;获取最高shell权限&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hack-text" scheme="http://yoursite.com/tags/hack-text/"/>
+    
+  </entry>
   
   <entry>
     <title>永恒之蓝-ms17_010</title>
