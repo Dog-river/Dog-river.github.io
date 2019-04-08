@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[爬虫闯关]]></title>
+    <url>%2F2019%2F04%2F08%2F%E7%88%AC%E8%99%AB%E9%97%AF%E5%85%B3%2F</url>
+    <content type="text"><![CDATA[闯关地址：http://www.heibanke.com/lesson/crawler_ex00/ 第一关思路： 在根据首页给的提示下，尝试在URL中输入数字，发现每一次都有新的。所以这是一个不断循环的，一直找到最后一个URL就闯关成功。根据源码对数字进行爬取。 12345678910111213141516171819# coding:utf-8import requestsimport reurl=&apos;http://www.heibanke.com/lesson/crawler_ex00/&apos;num_url=&apos;&apos;while 1: try: new_url=url+num_url print(new_url) data=requests.get(new_url).text #&lt;h3&gt;你需要在网址后输入数字64899&lt;/h3&gt; pattern=re.compile(&apos;&lt;h3&gt;.?(\d+).?&lt;/h3&gt;&apos;) result=re.search(pattern,data) num_url=result.group(1) except: print(&quot;THE END: &quot;+new_url) break 得到结果 总结： 本次我在result=re.search(pattern,data)上栽跟头！原先用的是match，但match是从头匹配！！！！对是从头！！！匹配！！！在开头出就会去找。所以会导致NONE！！！]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[渗透测试（FristiLeaks）]]></title>
     <url>%2F2019%2F03%2F25%2F%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%EF%BC%88FristiLeaks%EF%BC%89%2F</url>
     <content type="text"><![CDATA[目的：获取最高shell权限 1.收集信息ip；端口；及其对应服务 2.发现仅有80端口，则打开浏览器浏览网页 3.发现页面无交互窗口，kali中遍历目录 4.发现遍历的目录都无效，猜测在URL后追加admin等一些特殊字符，也可以用首页中的字符信息测试 5.http://192.168.10.158/fristi/此网页可打开；打开后是登录窗口；基本操作无效后；一方面dirb此地址，另一方面看看两个页面的源代码找信息 6.在HTML中发现有可能是base64加密的图片，在kali中解码 7.用eezeepz / keKkeKKeKKeKkEkkEk登录成功 8.存在文件上传，猜测上传一个一句话木马，用菜刀连接 因为存在文件后缀限制，上传php文件会失败;用%00截断也行不通，虽然上传成功但菜刀没连上（Magic_quote_gpc可能没有off） 试通过1.php.png文件解析漏洞上传成功，并用菜刀连接，获取低级权限。 9.提权 上传反弹shell脚本php-reverse-shell.php.jpg(kali中/usr/share/webshells/php目录中自带的)；更改参数。 在kali中打开监听，在URL上执行，获取shell 转换到bash（shell）；查询信息，从kali下载脏牛，提权！ ## GET AND ASK SELF 学会对base64，加密解密成图片，会在Linux里查询查看图片。 解析漏洞（后续。。。） 对php-reverse-shell.php代码分析（后续。。。）]]></content>
