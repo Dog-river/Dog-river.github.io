@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[爬虫闯关]]></title>
     <url>%2F2019%2F04%2F08%2F%E7%88%AC%E8%99%AB%E9%97%AF%E5%85%B3%2F</url>
-    <content type="text"><![CDATA[闯关地址：http://www.heibanke.com/lesson/crawler_ex00/ 第一关思路： 在根据首页给的提示下，尝试在URL中输入数字，发现每一次都有新的。所以这是一个不断循环的，一直找到最后一个URL就闯关成功。根据源码对数字进行爬取。 12345678910111213141516171819# coding:utf-8import requestsimport reurl=&apos;http://www.heibanke.com/lesson/crawler_ex00/&apos;num_url=&apos;&apos;while 1: try: new_url=url+num_url print(new_url) data=requests.get(new_url).text #&lt;h3&gt;你需要在网址后输入数字64899&lt;/h3&gt; pattern=re.compile(&apos;&lt;h3&gt;.?(\d+).?&lt;/h3&gt;&apos;) result=re.search(pattern,data) num_url=result.group(1) except: print(&quot;THE END: &quot;+new_url) break 得到结果 总结： 本次我在result=re.search(pattern,data)上栽跟头！原先用的是match，但match是从头匹配！！！！对是从头！！！匹配！！！在开头出就会去找\。所以会导致NONE！！！]]></content>
+    <content type="text"><![CDATA[闯关地址：http://www.heibanke.com/lesson/crawler_ex00/ 第一关思路： 在根据首页给的提示下，尝试在URL中输入数字，发现每一次都有新的。所以这是一个不断循环的，一直找到最后一个URL就闯关成功。根据源码对数字进行爬取。 12345678910111213141516171819# coding:utf-8import requestsimport reurl=&apos;http://www.heibanke.com/lesson/crawler_ex00/&apos;num_url=&apos;&apos;while 1: try: new_url=url+num_url print(new_url) data=requests.get(new_url).text #&lt;h3&gt;你需要在网址后输入数字64899&lt;/h3&gt; pattern=re.compile(&apos;&lt;h3&gt;.?(\d+).?&lt;/h3&gt;&apos;) result=re.search(pattern,data) num_url=result.group(1) except: print(&quot;THE END: &quot;+new_url) break 得到结果 总结： 本次我在result=re.search(pattern,data)上栽跟头！原先用的是match，但match是从头匹配！！！！对是从头！！！匹配！！！在开头出就会去找&lt;h3&gt;。所以会导致NONE！！！]]></content>
       <tags>
         <tag>python</tag>
       </tags>
