@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-08T14:04:45.238Z</updated>
+  <updated>2019-04-12T11:32:41.684Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>爬取猫眼电影TOP100与感悟</title>
+    <link href="http://yoursite.com/2019/04/12/%E7%88%AC%E5%8F%96%E7%8C%AB%E7%9C%BC%E7%94%B5%E5%BD%B1TOP100%E4%B8%8E%E6%84%9F%E6%82%9F/"/>
+    <id>http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/</id>
+    <published>2019-04-12T09:38:39.000Z</published>
+    <updated>2019-04-12T11:32:41.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;通过写这篇博客不仅仅是练习了爬虫的语法。更重要的是三点。&lt;/p&gt;
+&lt;p&gt;其一，体会到了&lt;strong&gt;Python三层结构&lt;/strong&gt;（自己起的名字哈哈哈哈）的好处；&lt;/p&gt;
+&lt;p&gt;其二，对书写爬虫有了&lt;strong&gt;流程步骤感&lt;/strong&gt;，可以更快的获得方向；&lt;/p&gt;
+&lt;p&gt;其三，对写&lt;strong&gt;正则表达式&lt;/strong&gt;的规范书写。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>爬虫闯关</title>
     <link href="http://yoursite.com/2019/04/08/%E7%88%AC%E8%99%AB%E9%97%AF%E5%85%B3/"/>
     <id>http://yoursite.com/2019/04/08/爬虫闯关/</id>
     <published>2019-04-08T13:21:49.000Z</published>
-    <updated>2019-04-08T14:04:45.238Z</updated>
+    <updated>2019-04-08T14:07:30.050Z</updated>
     
     <summary type="html">
     

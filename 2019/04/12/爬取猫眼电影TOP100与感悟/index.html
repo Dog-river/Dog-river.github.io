@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Nmap,">
+  <meta name="keywords" content="python,">
 
 
 
@@ -81,38 +81,18 @@
 
 
 
-<meta name="description" content="I.       写在前面 Nmap是什么？ ​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。">
-<meta name="keywords" content="Nmap">
+<meta name="description" content="写在前面通过写这篇博客不仅仅是练习了爬虫的语法。更重要的是三点。 其一，体会到了Python三层结构（自己起的名字哈哈哈哈）的好处； 其二，对书写爬虫有了流程步骤感，可以更快的获得方向； 其三，对写正则表达式的规范书写。">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nmap从入门到实践">
-<meta property="og:url" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/index.html">
+<meta property="og:title" content="爬取猫眼电影TOP100与感悟">
+<meta property="og:url" content="http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/index.html">
 <meta property="og:site_name" content="On The Road">
-<meta property="og:description" content="I.       写在前面 Nmap是什么？ ​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。">
+<meta property="og:description" content="写在前面通过写这篇博客不仅仅是练习了爬虫的语法。更重要的是三点。 其一，体会到了Python三层结构（自己起的名字哈哈哈哈）的好处； 其二，对书写爬虫有了流程步骤感，可以更快的获得方向； 其三，对写正则表达式的规范书写。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/1.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/2.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/3.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/4.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/5.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/6.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/7.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/8.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/9.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/10.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/11.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/12.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/13.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/14.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/15.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/16.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/17.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/18.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/19.png">
-<meta property="og:updated_time" content="2018-11-28T15:22:17.359Z">
+<meta property="og:updated_time" content="2019-04-12T11:32:41.684Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nmap从入门到实践">
-<meta name="twitter:description" content="I.       写在前面 Nmap是什么？ ​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。">
-<meta name="twitter:image" content="http://yoursite.com/2018/11/28/Nmap从入门到实践/1.png">
+<meta name="twitter:title" content="爬取猫眼电影TOP100与感悟">
+<meta name="twitter:description" content="写在前面通过写这篇博客不仅仅是练习了爬虫的语法。更重要的是三点。 其一，体会到了Python三层结构（自己起的名字哈哈哈哈）的好处； 其二，对书写爬虫有了流程步骤感，可以更快的获得方向； 其三，对写正则表达式的规范书写。">
 
 
 
@@ -142,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/28/Nmap从入门到实践/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/">
 
 
 
 
 
-  <title>Nmap从入门到实践 | On The Road</title>
+  <title>爬取猫眼电影TOP100与感悟 | On The Road</title>
   
 
 
@@ -307,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/28/Nmap从入门到实践/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dog-river">
@@ -324,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Nmap从入门到实践</h1>
+          <h1 class="post-title" itemprop="name headline">爬取猫眼电影TOP100与感悟</h1>
         
 
         <div class="post-meta">
@@ -336,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-28T20:11:50+08:00">
-                2018-11-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-12T17:38:39+08:00">
+                2019-04-12
               </time>
             
 
@@ -379,108 +359,57 @@
       
 
       
-        <h1 id="I-写在前面"><a href="#I-写在前面" class="headerlink" title="I.       写在前面"></a>I.       写在前面</h1><ul>
-<li><p>Nmap是什么？</p>
-<p>​    Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。</p>
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>通过写这篇博客不仅仅是练习了爬虫的语法。更重要的是三点。</p>
+<p>其一，体会到了<strong>Python三层结构</strong>（自己起的名字哈哈哈哈）的好处；</p>
+<p>其二，对书写爬虫有了<strong>流程步骤感</strong>，可以更快的获得方向；</p>
+<p>其三，对写<strong>正则表达式</strong>的规范书写。</p>
 <a id="more"></a>
-</li>
-<li><p>功能？</p>
-<p>​    探测一组主机是否在线；</p>
-<p>​    扫描主机端口，嗅探所提供的网络服务；</p>
-<p>​    推断主机所用的操作系统 。</p>
-</li>
-<li><p>所用工具：下载官网链接： scanme.nmap.org </p>
-<p>​    Nmap（命令行），wireshark，虚拟机（调试到仅主机模式）</p>
-</li>
-<li><p>如何获取Nmap？</p>
-<p>​    最初Nmap是工作在Linux上的。如今Windows上也可以使用。</p>
-<p>​    下载官网链接:<a href="http://scanme.nmap.org" target="_blank" rel="noopener">Nmap</a></p>
-<p>​    在官网中选择合适的系统下载。（以Windows为例，下列讲解也以window为例）</p>
-</li>
-<li><p>一定要在官网中下载，从别的渠道得到的里面可能会有别人加的后门。</p>
-<img src="/2018/11/28/Nmap从入门到实践/1.png">    
-<img src="/2018/11/28/Nmap从入门到实践/2.png">
-<img src="/2018/11/28/Nmap从入门到实践/3.png">
-</li>
+<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1>  
+<h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><h2 id="1-主页面信息收集"><a href="#1-主页面信息收集" class="headerlink" title="1.主页面信息收集"></a>1.主页面信息收集</h2><p>猫眼电影TOP100的URL是<code>https://maoyan.com/board/4</code>，每页10个，共10页。</p>
+<p>第2页的URL<code>https://maoyan.com/board/4?offset=10</code>；</p>
+<p>第3页的URL<code>https://maoyan.com/board/4?offset=20</code>；</p>
+<p>以此类推。一直到<code>90</code>是第10页。而且<code>?offset=0</code>等同于第1页。</p>
+<h2 id="2-分支页面信息收集"><a href="#2-分支页面信息收集" class="headerlink" title="2.分支页面信息收集"></a>2.分支页面信息收集</h2><p>点击进入页面源代码，寻找到要爬取的信息。并去横向对比每个信息是否采用同一种模板。</p>
+  
+<h1 id="爬取步骤"><a href="#爬取步骤" class="headerlink" title="爬取步骤"></a>爬取步骤</h1><p>1.抓取单页内容</p>
+<p>2.正则表达式分析</p>
+<p>3.保存至文件</p>
+<p>4.开启循环及段多线程</p>
+<p>注：每一个步骤在后续对应一个函数</p>
+<h1 id="爬虫代码与讲解"><a href="#爬虫代码与讲解" class="headerlink" title="爬虫代码与讲解"></a>爬虫代码与讲解</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Pool</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_one_html</span><span class="params">(url)</span>:</span></span><br><span class="line">    a=requests.get(url).text</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_message</span><span class="params">(html)</span>:</span></span><br><span class="line">    pattern=re.compile(<span class="string">'&lt;dd&gt;.*?board-index.*?(\d*)&lt;/i&gt;.*？	data-src="(.*?)".*?class="name".*?title="(.*?)".*?class="star"&gt;(.*?)&lt;/p&gt;.*?releasetime"&gt;(.*?)&lt;/p&gt;.*?class="integer"&gt;(.*?)&lt;/i&gt;.*?fraction"&gt;(\d)&lt;/i&gt;.*?&lt;/dd&gt;'</span>,re.S)</span><br><span class="line">    results=re.findall(pattern,html)</span><br><span class="line">    <span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">        <span class="keyword">yield</span>&#123;</span><br><span class="line">            <span class="string">'index'</span>:result[<span class="number">0</span>],</span><br><span class="line">            <span class="string">'image'</span>:result[<span class="number">1</span>],</span><br><span class="line">            <span class="string">'title'</span>:result[<span class="number">2</span>],</span><br><span class="line">            <span class="string">'actor'</span>:result[<span class="number">3</span>].strip()[<span class="number">3</span>:],</span><br><span class="line">            <span class="string">'Time'</span>:result[<span class="number">4</span>].strip()[<span class="number">5</span>:],</span><br><span class="line">            <span class="string">'score'</span>:result[<span class="number">5</span>]+result[<span class="number">6</span>]</span><br><span class="line">        &#125;</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_file</span><span class="params">(content)</span>:</span></span><br><span class="line">    <span class="keyword">with</span> open (<span class="string">'TOP100.txt'</span>,<span class="string">'a'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(json.dumps(content,ensure_ascii=<span class="keyword">False</span>)+<span class="string">'\n'</span>)</span><br><span class="line">        f.close()</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(offset)</span>:</span></span><br><span class="line">    url=<span class="string">"https://maoyan.com/board/4?offset="</span>+str(offset)</span><br><span class="line">    html = get_one_html(url)</span><br><span class="line">    message=get_message(html)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> message:</span><br><span class="line">        save_file(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    pool=Pool()</span><br><span class="line">    pool.map(main,[i*<span class="number">10</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)])</span><br><span class="line"><span class="comment">#    for i in range(10):</span></span><br><span class="line"><span class="comment">#    main(i*10)</span></span><br></pre></td></tr></table></figure>
+<p>我们按最初的步骤来讲解</p>
+<h2 id="1-抓取单页内容"><a href="#1-抓取单页内容" class="headerlink" title="1.抓取单页内容"></a>1.抓取单页内容</h2><p>​     <code>get_one_html（）</code>函数采用requests库通过get方式获得了页面的源代码。</p>
+<h2 id="2-正则表达式分析"><a href="#2-正则表达式分析" class="headerlink" title="2.正则表达式分析"></a>2.正则表达式分析</h2><p>​     <code>get_message（）</code>函数通过正则表达式表示出所需要的那些信息。然后调用yield 的函数在 Python 中被称之为 generator（生成器） 。通过<code>for i in message:           save_file(i)</code>   对正则找到的信息进行遍历。</p>
+<h3 id="什么是yied？"><a href="#什么是yied？" class="headerlink" title="什么是yied？"></a>什么是yied？</h3><p>​    简单地讲，yield 的作用就是把一个函数变成一个 generator，带有 yield 的函数不再是一个普通函数，Python 解释器会将其视为一个 generator，调用 get_message（） 不会执行 get_message（） 函数，而是返回一个 iterable 对象！在 for 循环执行时，每次循环都会执行 get_message（） 函数内部的代码，执行到 yield  时，get_message（） 函数就返回一个迭代值，下次迭代时，代码从 yield  的下一条语句继续执行，而函数的本地变量看起来和上次中断执行前是完全一样的，于是函数继续执行，直到再次遇到 yield。</p>
+<h2 id="3-保存至文件"><a href="#3-保存至文件" class="headerlink" title="3.保存至文件"></a>3.保存至文件</h2><p>​     <code>save_file（）</code>函数是用来将for遍历yied中的结果存到一个文件中的函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open (<span class="string">'TOP100.txt'</span>,<span class="string">'a'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(json.dumps(content,ensure_ascii=<span class="keyword">False</span>)+<span class="string">'\n'</span>)</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
+<p>代码中建立了一个名为“TOP100.txt”的文件存放结果，a表示追加，因为yield产生的是一个字典（json）所以json.dumps（）的作用是将dict转化成str格式 。注意使用json.dumps()需要导入json库。<code>encoding=&#39;utf-8&#39;</code>和<code>ensure_ascii=False</code>的作用是让存在文件中的内容以中文表示，否则如下图。</p>
+  
+<h2 id="4-开启循环及段多线程"><a href="#4-开启循环及段多线程" class="headerlink" title="4.开启循环及段多线程"></a>4.开启循环及段多线程</h2><h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>​    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(offset)</span>:</span></span><br><span class="line">    url=<span class="string">"https://maoyan.com/board/4?offset="</span>+str(offset)</span><br><span class="line">    html = get_one_html(url)</span><br><span class="line">    message=get_message(html)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> message:</span><br><span class="line">        save_file(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">  	 main(i*<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<p>在main（）函数中运行时导入offset参数，在<code>if __name__ == &#39;__main__&#39;:</code>中用循环输入对应的数值。</p>
+<h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><p>采用多线程爬出来的顺序是乱的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Pool</span><br><span class="line"></span><br><span class="line"><span class="comment">#略去中间代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment">#声明一个进程池</span></span><br><span class="line">    pool=Pool()</span><br><span class="line">    pool.map(main,[i*<span class="number">10</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)])</span><br></pre></td></tr></table></figure>
+<h2 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h2>  
+  
+<h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><h2 id="1-Python三层结构"><a href="#1-Python三层结构" class="headerlink" title="1.Python三层结构"></a>1.Python三层结构</h2><p>哈哈，说过了这是我自己起的名字，它的三级其实是:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">其他普通函数，</span><br><span class="line"></span><br><span class="line">主函数，</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br></pre></td></tr></table></figure>
+<p><code>if __name__ == &#39;__main__&#39;:</code>会调用主函数，当然也可以给主函数传值；主函数中可以调用其他函数。这样避免了程序的死板。别人可能早就发现了，但我今天才发现。。。</p>
+<h2 id="2-流程步骤感"><a href="#2-流程步骤感" class="headerlink" title="2.流程步骤感"></a>2.流程步骤感</h2><p>干每一件事都有规律和顺序可言，当然写爬虫也是。对一个复杂的东西就去将它抽丝剥茧。那本题为例，</p>
+<p>要爬取TOP100；</p>
+<p>它分了10页；</p>
+<p>每页又分了10个；</p>
+<p>我们就先去搞一个；</p>
+<p>获得到一个之后，正则表达；</p>
+<p>获得想要的格式；</p>
+<p>保存到文件；</p>
+<p>遍历他们！</p>
+<p>（好有步骤感）</p>
+<h2 id="3-正则表达式"><a href="#3-正则表达式" class="headerlink" title="3.正则表达式"></a>3.正则表达式</h2><ul>
+<li>找准<strong>目标</strong>—-判断正则表示<strong>类型</strong>—-<strong>前后夹击</strong>使得唯一确定出目标</li>
+<li>前后夹击时如果是标签一定要把尖括号写完整</li>
+<li>分行时采用(‘’+’’)格式</li>
 </ul>
-<h1 id="II-Nmap中的一些用法"><a href="#II-Nmap中的一些用法" class="headerlink" title="II.     Nmap中的一些用法"></a>II.     Nmap中的一些用法</h1><p>下载的Nmap可以用图形化界面操作，但我们根据Nmap前面提到的功能在命令行中对其命令进行相对应的分类。</p>
-<p>Nmap可以扫描内网也可以扫描外网，此次以内网讲解。内网：在虚拟机中设定一活跃主机192.168.91.135。</p>
-<p>代码中的\&lt; target &gt; 可以是单一 IP, 或主机名，或域名，或子网</p>
-<h3 id="1-主机发现"><a href="#1-主机发现" class="headerlink" title="1.主机发现"></a>1.主机发现</h3><p>（1）<code>nmap -sL &lt;target&gt;</code>     </p>
-<p>​    仅仅是将IP段内主机列成一张表</p>
-<p>​    这里的 \&lt; target &gt; 是一个ip段</p>
-<img src="/2018/11/28/Nmap从入门到实践/4.png">
-<p>（2）<code>nmap -sP &lt;target&gt;</code></p>
-<p>​    局域网内：<code>-sP</code>参数原理为ARP扫描</p>
-<img src="/2018/11/28/Nmap从入门到实践/5.png">
-<img src="/2018/11/28/Nmap从入门到实践/6.png">
-<p>（3）部分局域网和大多数公网都会设有防火墙，所以对策如下：</p>
-<p>​         <code>nmap -PS &lt;target&gt;</code>         (TCP SYS)</p>
-<p>​         <code>nmap -PA &lt;target&gt;</code>             (TCP ACK)</p>
-<p>​      <strong>##</strong>这两个命令在cmd中的所展现的是一样的，但所用的方法不同</p>
-<p>​            局域网内：ARP扫描+常用的1000个TCP端口尝试建立连接</p>
-<p>​            只有当扫描的到开机的主机，才会对此主机进行端口的扫描</p>
-<img src="/2018/11/28/Nmap从入门到实践/7.png">
-<img src="/2018/11/28/Nmap从入门到实践/8.png">
-<img src="/2018/11/28/Nmap从入门到实践/9.png">
-<h3 id="2-端口扫描"><a href="#2-端口扫描" class="headerlink" title="2.端口扫描"></a>2.端口扫描</h3><p><strong>##端口的状态##</strong></p>
-<table>
-<thead>
-<tr>
-<th><code>open</code></th>
-<th>开放的</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>close</code></td>
-<td>关闭的</td>
-</tr>
-<tr>
-<td><code>filtered</code></td>
-<td>被防火墙过滤的</td>
-</tr>
-<tr>
-<td><code>unfiltered</code></td>
-<td>未被过滤的</td>
-</tr>
-<tr>
-<td><code>open\filtered</code></td>
-<td>开放或者被过滤的</td>
-</tr>
-<tr>
-<td><code>closed\filtered</code></td>
-<td>关闭或者被过滤的</td>
-</tr>
-</tbody>
-</table>
-<p>（1）<code>nmap -sS  &lt;target&gt;</code></p>
-<p>​     <code>-sS</code>为半连接，只进行TCP三次握手的前两次，所以相对较快。</p>
- <img src="/2018/11/28/Nmap从入门到实践/10.png">
- <img src="/2018/11/28/Nmap从入门到实践/11.png">
-<p>（2）<code>nmap  -sT  &lt;target&gt;</code></p>
-<p>​           <code>-sT</code>命令为全连接，耗时较长。</p>
- <img src="/2018/11/28/Nmap从入门到实践/12.png">
- <img src="/2018/11/28/Nmap从入门到实践/13.png">
-<p>（3）<code>nmap -sU  &lt;target&gt;</code></p>
-<img src="/2018/11/28/Nmap从入门到实践/14.png">
-<img src="/2018/11/28/Nmap从入门到实践/15.png">
-<p><strong>##Remark!</strong></p>
-<p>​      <code>-Pn</code> : 此参数可以绕过主机发现这一过程</p>
-<p>​      <code>-p</code>:次参数可以指定端口eg. <code>Nmap -sS -p 80 192.168.91.135</code>（扫描80端口）</p>
-<h3 id="3-版本探测"><a href="#3-版本探测" class="headerlink" title="3.版本探测"></a>3.版本探测</h3><p>（1）<code>nmap -sV &lt;target&gt;</code></p>
-<img src="/2018/11/28/Nmap从入门到实践/16.png">
-<img src="/2018/11/28/Nmap从入门到实践/17.png">
-<p>（2） <code>namp -O &lt;target&gt;</code></p>
-<p>​             操作系统判断</p>
-<img src="/2018/11/28/Nmap从入门到实践/18.png">
-<p>（3） <code>namp -A &lt;target&gt;</code></p>
-<p>​          查询全部数据</p>
-<img src="/2018/11/28/Nmap从入门到实践/19.png">
-<h1 id="III-写在最后"><a href="#III-写在最后" class="headerlink" title="III.  写在最后"></a>III.  写在最后</h1><p>这是我第一次写这种学习后的所获文档。写出来总感觉还所缺陷，但又不知又从何处入手。内有不足欢迎大家指正。</p>
-<p>Nmap是一个在做渗透测试时常用的信息收集软件。里面有许多各式各样的参数需要去学习，当然你如果全部把他们的功能背诵下来知道每个命令都可以干什么，那确实很棒。但现实…….哈哈哈，大家都一样，所以需要去总结，分类。本次我按其功能分为三类，详细如上。我在学习中也遇到了些许问题，例如：主机探测中的-PS -PA参数和端口探测中-sS -sT有何区别？？？我也很无语，还在查证中~~</p>
-<p>这个文档全部是以内网作为讲解，大家可以也可以拿着工具去公网上搞一波，测一测。练习虽好，但切记点到为止，公网安全需要大家共同维护！</p>
-<hr>
 
       
     </div>
@@ -498,7 +427,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Nmap/" rel="tag"># Nmap</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -511,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/25/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/04/08/爬虫闯关/" rel="next" title="爬虫闯关">
+                <i class="fa fa-chevron-left"></i> 爬虫闯关
               </a>
             
           </div>
@@ -520,10 +449,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/11/Linux系统基本命令小结/" rel="prev" title="Linux系统基本命令小结">
-                Linux系统基本命令小结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -658,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#I-写在前面"><span class="nav-number">1.</span> <span class="nav-text">I.       写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#II-Nmap中的一些用法"><span class="nav-number">2.</span> <span class="nav-text">II.     Nmap中的一些用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-主机发现"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.主机发现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-端口扫描"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.端口扫描</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-版本探测"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.版本探测</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#III-写在最后"><span class="nav-number">3.</span> <span class="nav-text">III.  写在最后</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目标"><span class="nav-number">2.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信息收集"><span class="nav-number">3.</span> <span class="nav-text">信息收集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-主页面信息收集"><span class="nav-number">3.1.</span> <span class="nav-text">1.主页面信息收集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-分支页面信息收集"><span class="nav-number">3.2.</span> <span class="nav-text">2.分支页面信息收集</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#爬取步骤"><span class="nav-number">4.</span> <span class="nav-text">爬取步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#爬虫代码与讲解"><span class="nav-number">5.</span> <span class="nav-text">爬虫代码与讲解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-抓取单页内容"><span class="nav-number">5.1.</span> <span class="nav-text">1.抓取单页内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-正则表达式分析"><span class="nav-number">5.2.</span> <span class="nav-text">2.正则表达式分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是yied？"><span class="nav-number">5.2.1.</span> <span class="nav-text">什么是yied？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-保存至文件"><span class="nav-number">5.3.</span> <span class="nav-text">3.保存至文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-开启循环及段多线程"><span class="nav-number">5.4.</span> <span class="nav-text">4.开启循环及段多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#循环"><span class="nav-number">5.4.1.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多线程"><span class="nav-number">5.4.2.</span> <span class="nav-text">多线程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结果展示"><span class="nav-number">5.5.</span> <span class="nav-text">结果展示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在最后"><span class="nav-number">6.</span> <span class="nav-text">写在最后</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Python三层结构"><span class="nav-number">6.1.</span> <span class="nav-text">1.Python三层结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-流程步骤感"><span class="nav-number">6.2.</span> <span class="nav-text">2.流程步骤感</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-正则表达式"><span class="nav-number">6.3.</span> <span class="nav-text">3.正则表达式</span></a></li></ol></li></ol></div>
             
 
           </div>
