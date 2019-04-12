@@ -89,10 +89,16 @@
 <meta property="og:site_name" content="On The Road">
 <meta property="og:description" content="写在前面通过写这篇博客不仅仅是练习了爬虫的语法。更重要的是三点。 其一，体会到了Python三层结构（自己起的名字哈哈哈哈）的好处； 其二，对书写爬虫有了流程步骤感，可以更快的获得方向； 其三，对写正则表达式的规范书写。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/5.png">
 <meta property="og:updated_time" content="2019-04-12T11:32:41.684Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬取猫眼电影TOP100与感悟">
 <meta name="twitter:description" content="写在前面通过写这篇博客不仅仅是练习了爬虫的语法。更重要的是三点。 其一，体会到了Python三层结构（自己起的名字哈哈哈哈）的好处； 其二，对书写爬虫有了流程步骤感，可以更快的获得方向； 其三，对写正则表达式的规范书写。">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/1.png">
 
 
 
@@ -364,13 +370,13 @@
 <p>其二，对书写爬虫有了<strong>流程步骤感</strong>，可以更快的获得方向；</p>
 <p>其三，对写<strong>正则表达式</strong>的规范书写。</p>
 <a id="more"></a>
-<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1>  
+<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><img src="/2019/04/12/爬取猫眼电影TOP100与感悟/1.png">  
 <h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><h2 id="1-主页面信息收集"><a href="#1-主页面信息收集" class="headerlink" title="1.主页面信息收集"></a>1.主页面信息收集</h2><p>猫眼电影TOP100的URL是<code>https://maoyan.com/board/4</code>，每页10个，共10页。</p>
 <p>第2页的URL<code>https://maoyan.com/board/4?offset=10</code>；</p>
 <p>第3页的URL<code>https://maoyan.com/board/4?offset=20</code>；</p>
 <p>以此类推。一直到<code>90</code>是第10页。而且<code>?offset=0</code>等同于第1页。</p>
 <h2 id="2-分支页面信息收集"><a href="#2-分支页面信息收集" class="headerlink" title="2.分支页面信息收集"></a>2.分支页面信息收集</h2><p>点击进入页面源代码，寻找到要爬取的信息。并去横向对比每个信息是否采用同一种模板。</p>
-  
+<img src="/2019/04/12/爬取猫眼电影TOP100与感悟/2.png">  
 <h1 id="爬取步骤"><a href="#爬取步骤" class="headerlink" title="爬取步骤"></a>爬取步骤</h1><p>1.抓取单页内容</p>
 <p>2.正则表达式分析</p>
 <p>3.保存至文件</p>
@@ -384,14 +390,14 @@
 <h2 id="3-保存至文件"><a href="#3-保存至文件" class="headerlink" title="3.保存至文件"></a>3.保存至文件</h2><p>​     <code>save_file（）</code>函数是用来将for遍历yied中的结果存到一个文件中的函数。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open (<span class="string">'TOP100.txt'</span>,<span class="string">'a'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(json.dumps(content,ensure_ascii=<span class="keyword">False</span>)+<span class="string">'\n'</span>)</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
 <p>代码中建立了一个名为“TOP100.txt”的文件存放结果，a表示追加，因为yield产生的是一个字典（json）所以json.dumps（）的作用是将dict转化成str格式 。注意使用json.dumps()需要导入json库。<code>encoding=&#39;utf-8&#39;</code>和<code>ensure_ascii=False</code>的作用是让存在文件中的内容以中文表示，否则如下图。</p>
-  
+<img src="/2019/04/12/爬取猫眼电影TOP100与感悟/3.png">  
 <h2 id="4-开启循环及段多线程"><a href="#4-开启循环及段多线程" class="headerlink" title="4.开启循环及段多线程"></a>4.开启循环及段多线程</h2><h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>​    </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(offset)</span>:</span></span><br><span class="line">    url=<span class="string">"https://maoyan.com/board/4?offset="</span>+str(offset)</span><br><span class="line">    html = get_one_html(url)</span><br><span class="line">    message=get_message(html)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> message:</span><br><span class="line">        save_file(i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">  	 main(i*<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
 <p>在main（）函数中运行时导入offset参数，在<code>if __name__ == &#39;__main__&#39;:</code>中用循环输入对应的数值。</p>
 <h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><p>采用多线程爬出来的顺序是乱的。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Pool</span><br><span class="line"></span><br><span class="line"><span class="comment">#略去中间代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment">#声明一个进程池</span></span><br><span class="line">    pool=Pool()</span><br><span class="line">    pool.map(main,[i*<span class="number">10</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)])</span><br></pre></td></tr></table></figure>
-<h2 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h2>  
-  
+<h2 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h2><img src="/2019/04/12/爬取猫眼电影TOP100与感悟/4.png">  
+<img src="/2019/04/12/爬取猫眼电影TOP100与感悟/5.png">  
 <h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><h2 id="1-Python三层结构"><a href="#1-Python三层结构" class="headerlink" title="1.Python三层结构"></a>1.Python三层结构</h2><p>哈哈，说过了这是我自己起的名字，它的三级其实是:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">其他普通函数，</span><br><span class="line"></span><br><span class="line">主函数，</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br></pre></td></tr></table></figure>
 <p><code>if __name__ == &#39;__main__&#39;:</code>会调用主函数，当然也可以给主函数传值；主函数中可以调用其他函数。这样避免了程序的死板。别人可能早就发现了，但我今天才发现。。。</p>
