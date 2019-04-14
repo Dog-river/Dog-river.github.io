@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-12T11:32:41.684Z</updated>
+  <updated>2019-04-14T15:29:35.009Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何用burpsuite抓取手机上的包</title>
+    <link href="http://yoursite.com/2019/04/14/%E5%A6%82%E4%BD%95%E7%94%A8burpsuite%E6%8A%93%E5%8F%96%E6%89%8B%E6%9C%BA%E4%B8%8A%E7%9A%84%E5%8C%85/"/>
+    <id>http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/</id>
+    <published>2019-04-14T15:03:59.000Z</published>
+    <updated>2019-04-14T15:29:35.009Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h1&gt;&lt;p&gt;实现对手机的数据包抓取&lt;/p&gt;
+&lt;h1 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h1&gt;&lt;p&gt;burpsuite，手机模拟器（夜神模拟器为例）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hack-text" scheme="http://yoursite.com/tags/hack-text/"/>
+    
+  </entry>
+  
+  <entry>
     <title>爬取猫眼电影TOP100与感悟</title>
     <link href="http://yoursite.com/2019/04/12/%E7%88%AC%E5%8F%96%E7%8C%AB%E7%9C%BC%E7%94%B5%E5%BD%B1TOP100%E4%B8%8E%E6%84%9F%E6%82%9F/"/>
     <id>http://yoursite.com/2019/04/12/爬取猫眼电影TOP100与感悟/</id>
     <published>2019-04-12T09:38:39.000Z</published>
-    <updated>2019-04-12T11:32:41.684Z</updated>
+    <updated>2019-04-14T12:42:39.134Z</updated>
     
     <summary type="html">
     
