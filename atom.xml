@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-25T13:58:27.149Z</updated>
+  <updated>2019-04-26T12:13:28.481Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux反弹shell（二）</title>
+    <link href="http://yoursite.com/2019/04/25/Linux%E5%8F%8D%E5%BC%B9shell%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/04/25/Linux反弹shell（二）/</id>
+    <published>2019-04-25T14:03:23.000Z</published>
+    <updated>2019-04-26T12:13:28.481Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;0x01-写在前面&quot;&gt;&lt;a href=&quot;#0x01-写在前面&quot; class=&quot;headerlink&quot; title=&quot;0x01.写在前面&quot;&gt;&lt;/a&gt;0x01.写在前面&lt;/h1&gt;&lt;p&gt;Linux的反弹shell在前面的第一弹中了解了文件描述符和重定向，下来就开始对Linux反弹shell的更深层理解。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux-shell" scheme="http://yoursite.com/tags/linux-shell/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux反弹shell（一）</title>

