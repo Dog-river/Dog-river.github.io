@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-26T12:13:28.481Z</updated>
+  <updated>2019-05-06T15:26:18.027Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>某邮电大学信息安全专业课设小记</title>
+    <link href="http://yoursite.com/2019/05/06/%E6%9F%90%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E4%B8%93%E4%B8%9A%E8%AF%BE%E8%AE%BE%E5%B0%8F%E8%AE%B0/"/>
+    <id>http://yoursite.com/2019/05/06/某邮电大学信息安全专业课设小记/</id>
+    <published>2019-05-06T14:16:47.000Z</published>
+    <updated>2019-05-06T15:26:18.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;这是我大二的课设作业，为了记录所学，加之本次与HTTP和Python有关。就将之记录下来。本来是分配到第一个，但因理解偏差，做成第二个。。。于是，下面是两个题目的代码。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="others" scheme="http://yoursite.com/tags/others/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux反弹shell（三）</title>
+    <link href="http://yoursite.com/2019/04/26/Linux%E5%8F%8D%E5%BC%B9shell%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/04/26/Linux反弹shell（三）/</id>
+    <published>2019-04-26T12:16:30.000Z</published>
+    <updated>2019-04-26T12:30:13.682Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;0x01-写在前面&quot;&gt;&lt;a href=&quot;#0x01-写在前面&quot; class=&quot;headerlink&quot; title=&quot;0x01.写在前面&quot;&gt;&lt;/a&gt;0x01.写在前面&lt;/h1&gt;&lt;p&gt;之前两篇文档分别阐述了文件描述符和重定向，对反弹shell的经典做出了分析。本次打算写一篇针对不同语言的反弹Linux的shell的小结。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux-shell" scheme="http://yoursite.com/tags/linux-shell/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux反弹shell（二）</title>
