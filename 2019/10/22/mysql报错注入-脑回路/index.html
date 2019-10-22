@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/10/22/mysql报错注入-脑回路/21.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/22/mysql报错注入-脑回路/22.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/22/mysql报错注入-脑回路/31.png">
-<meta property="og:updated_time" content="2019-10-22T07:03:53.087Z">
+<meta property="og:updated_time" content="2019-10-22T07:14:25.417Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql报错注入-脑回路">
 <meta name="twitter:description" content="写在前面​    由于要找实习，面试被面试官问的怀疑狗生，所以近期打算复习一些基础。在复习到mysql报错注入的时候，我就发现了原来学习过程中遗留的问题，和一些忘记的知识点，和脑回路问题。例如此次要分享的，为什么floor（rand（1）*2)中count（）的结果很“古怪”？究其根本还是对细节的理解不够。在此，进行总结。">
@@ -368,13 +368,13 @@
       
         <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>​    由于要找实习，面试被面试官问的怀疑狗生，所以近期打算复习一些基础。在复习到mysql报错注入的时候，我就发现了原来学习过程中遗留的问题，和一些忘记的知识点，和脑回路问题。例如此次要分享的，为什么<code>floor（rand（1）*2)</code>中<code>count（）</code>的结果很“古怪”？究其根本还是对细节的理解不够。在此，进行总结。</p>
 <a id="more"></a>
-<h1 id="1-提出问题"><a href="#1-提出问题" class="headerlink" title="1.    提出问题"></a>1.    提出问题</h1><p>​    对于这个问题，出发点是看见报错注入分析中（<a href="https://xz.aliyun.com/t/253" target="_blank" rel="noopener">https://xz.aliyun.com/t/253</a>）说，“010和101开头的序列不会产生报错”。当时就在想按照原理，不应该是确定4位才可以保证无法通过注入嘛？（这是第一个问题），然后我在自己的mysql上试了试，又发现当一张表里有四条数据时rand(1)*2在count（）后出现的“怪事”。（这是第二个问题）</p>
+<h1 id="提出问题"><a href="#提出问题" class="headerlink" title="提出问题"></a>提出问题</h1><p>​    对于这个问题，出发点是看见报错注入分析中（<a href="https://xz.aliyun.com/t/253" target="_blank" rel="noopener">https://xz.aliyun.com/t/253</a>）说，“010和101开头的序列不会产生报错”。当时就在想按照原理，不应该是确定4位才可以保证无法通过注入嘛？（这是第一个问题），然后我在自己的mysql上试了试，又发现当一张表里有四条数据时rand(1)*2在count（）后出现的“怪事”。（这是第二个问题）</p>
 <img src="/2019/10/22/mysql报错注入-脑回路/11.png"> 
 <img src="/2019/10/22/mysql报错注入-脑回路/12.png"> 
 <img src="/2019/10/22/mysql报错注入-脑回路/13.png"> 
 <p>​    为啥floor(rand(1)*2)中产生的序列是0100，但count（）后结果却是0和1分别出现2次 呢?</p>
 <p>按照当下思路的分析（默认你会分析rand(0)*2），这里的结果是0和1 各是1次。但这里为什么出现的是2次呢？刚开始我也充满了疑问。。。</p>
-<h1 id="2-问题分析与解决"><a href="#2-问题分析与解决" class="headerlink" title="2.问题分析与解决"></a>2.问题分析与解决</h1><h2 id="0x01-问题一："><a href="#0x01-问题一：" class="headerlink" title="0x01 问题一："></a>0x01 问题一：</h2><p><strong>答案</strong>：上述文章中关于0,1,0和1,0,1序列即可避免报错，这一说法是错误的。要保证无论如何都不会报错必须，至少确定4位序列，即0,1,0,0 或0,0,1,1或1,0,1,1或1,1,0,0。（有且只有这四种）</p>
+<h1 id="问题分析与解决"><a href="#问题分析与解决" class="headerlink" title="问题分析与解决"></a>问题分析与解决</h1><h2 id="0x01-问题一："><a href="#0x01-问题一：" class="headerlink" title="0x01 问题一："></a>0x01 问题一：</h2><p><strong>答案</strong>：上述文章中关于0,1,0和1,0,1序列即可避免报错，这一说法是错误的。要保证无论如何都不会报错必须，至少确定4位序列，即0,1,0,0 或0,0,1,1或1,0,1,1或1,1,0,0。（有且只有这四种）</p>
 <p><strong>论证</strong>：为什么三位不行？</p>
 <img src="/2019/10/22/mysql报错注入-脑回路/21.png"> 
 <img src="/2019/10/22/mysql报错注入-脑回路/22.png"> 
@@ -565,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-提出问题"><span class="nav-number">2.</span> <span class="nav-text">1.    提出问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-问题分析与解决"><span class="nav-number">3.</span> <span class="nav-text">2.问题分析与解决</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-问题一："><span class="nav-number">3.1.</span> <span class="nav-text">0x01 问题一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-问题二："><span class="nav-number">3.2.</span> <span class="nav-text">0x02 问题二：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#提出问题"><span class="nav-number">2.</span> <span class="nav-text">提出问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题分析与解决"><span class="nav-number">3.</span> <span class="nav-text">问题分析与解决</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-问题一："><span class="nav-number">3.1.</span> <span class="nav-text">0x01 问题一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-问题二："><span class="nav-number">3.2.</span> <span class="nav-text">0x02 问题二：</span></a></li></ol></li></ol></div>
             
 
           </div>
